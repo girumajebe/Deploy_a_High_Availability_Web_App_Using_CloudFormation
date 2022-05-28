@@ -1,5 +1,5 @@
 Description: >
-  Girum Ajebe  / Udagram Project
+  Girum Ajebe / Udagram Project
 
 Parameters:
   EnvironmentName:
@@ -273,11 +273,12 @@ Resources:
           cd /var/www/html
           aws s3 cp s3://udacity-s3-girum/udacity.zip .
           unzip -o udacity.zip
-      ImageId: ami-006a0174c6c25ac06
+      ImageId: ami-05837ea3e41f3fde3
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
       SecurityGroups:
         - Ref: WebServerSecGroup
-      InstanceType: t3.small
+      InstanceType: t2.mediumls
+    
       BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
           Ebs:
