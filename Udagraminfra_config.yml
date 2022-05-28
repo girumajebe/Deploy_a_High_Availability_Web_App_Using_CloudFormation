@@ -213,7 +213,7 @@ Resources:
               - sts:AssumeRole
       Path: "/"
 
-    ProfileWithRolesForOurApp:
+  ProfileWithRolesForOurApp:
     Type: AWS::IAM::InstanceProfile
     Properties:
       Path: "/"

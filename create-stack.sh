@@ -1,6 +1,6 @@
 aws cloudformation create-stack \
---stack-name $1 \
---template-body file://$2 \
---parameters file://$3 \
+--stack-name udagram \
+--template-body file://Udagraminfra_config.yml \
+--parameters file://Udagraminfra.json \
 --region=us-east-1 \
---capabilities CAPABILITY_IAM
+--capabilities CAPABILITY_NAMED_IAM
