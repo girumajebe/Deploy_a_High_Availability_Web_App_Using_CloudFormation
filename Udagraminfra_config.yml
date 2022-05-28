@@ -277,7 +277,7 @@ Resources:
       IamInstanceProfile: !Ref ProfileWithRolesForOurApp
       SecurityGroups:
         - Ref: WebServerSecGroup
-      InstanceType: t2.mediumls
+      InstanceType: t2.medium
     
       BlockDeviceMappings:
         - DeviceName: "/dev/sdk"
