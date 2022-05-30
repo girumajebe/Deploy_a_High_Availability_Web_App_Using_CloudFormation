@@ -212,6 +212,22 @@ Resources:
             Action:
               - sts:AssumeRole
       Path: "/"
+  RolePolicies:
+    Type: AWS::IAM::Policy
+    Properties:
+      PolicyName: AmazonS3ReadOnlyAccess
+      PolicyDocument:
+        Version: "2012-10-17"
+        Statement:
+          - Effect: Allow
+            Action:
+              - s3:Get*
+              - s3:List*
+            Resource:
+              - arn:aws:s3:::udacity-s3-Girum
+              - arn:aws:s3:::udacity-s3-Girum/*
+      Roles:
+        - Ref: UdacityS3ReadOnlyEC2
 
   ProfileWithRolesForOurApp:
     Type: AWS::IAM::InstanceProfile
